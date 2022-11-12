@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textInfo;
     UsbDevice device;
     UsbManager manager;
-    private static final String ACTION_USB_PERMISSION = "com.mobilemerit.usbhost.USB_PERMISSION";
+    private static final String ACTION_USB_PERMISSION = "com.abir.usbhostrecognise.USB_PERMISSION";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         // -------------------------------------------------------------------
         HashMap<String , UsbDevice> deviceList = manager.getDeviceList();
         Iterator<UsbDevice> deviceIterator = deviceList.values().iterator();
-        String i = "";
+        String i = "No value";
         while (deviceIterator.hasNext()) {
             device = deviceIterator.next();
             manager.requestPermission(device, mPermissionIntent);
